@@ -19,12 +19,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navbar */
+        /* Navbar: Logo bên trái, kích thước lớn hơn */
         nav {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            padding: 12px 0;
+            padding: 10px 0; /* Thu nhỏ padding nav một chút để logo nổi bật */
             position: fixed;
             width: 100%;
             top: 0;
@@ -33,41 +33,33 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             display: flex;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Tăng size logo ở Nav */
+        /* Kích thước logo Navbar đã được tăng lên */
         .nav-logo {
-            height: 28px; 
+            height: 32px; 
             width: auto;
-            opacity: 1;
+            display: block;
         }
 
         .nav-brand {
             color: #f5f5f7;
             text-decoration: none;
-            font-size: 16px; /* Tăng nhẹ size chữ brand cho cân với logo */
-            font-weight: 500;
+            font-size: 17px;
+            font-weight: 600;
             margin-left: 12px;
             letter-spacing: -0.01em;
         }
 
         /* Hero Section */
         .hero {
-            padding-top: 160px;
+            padding-top: 200px;
             padding-bottom: 80px;
-        }
-
-        /* Logo chính ở giữa trang */
-        .hero-logo {
-            width: 100px; /* Logo lớn ở trung tâm */
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
         }
 
         h1 {
@@ -96,11 +88,11 @@
             padding: 0 20px;
         }
 
-        /* Shiny Button Effect */
+        /* Shiny Button */
         .btn-download {
             background-color: #0071e3;
             color: white;
-            padding: 14px 32px;
+            padding: 14px 34px;
             border-radius: 980px;
             font-size: 17px;
             font-weight: 500;
@@ -122,7 +114,7 @@
             content: '';
             position: absolute;
             top: -50%;
-            left: -100%;
+            left: -150%;
             width: 50%;
             height: 200%;
             background: linear-gradient(
@@ -132,29 +124,28 @@
                 transparent
             );
             transform: rotate(30deg);
-            transition: none;
         }
 
         .btn-download:hover::after {
             left: 150%;
-            transition: all 0.6s ease;
+            transition: all 0.7s ease-in-out;
         }
 
         .free-label {
             display: block;
-            margin-top: 12px;
+            margin-top: 14px;
             font-size: 13px;
             color: #00ff73;
-            opacity: 0.9;
             font-weight: 500;
+            opacity: 0.9;
         }
 
-        /* Social Links */
+        /* Socials */
         .social-links {
             margin-top: 40px;
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
         }
 
         .social-links a {
@@ -214,8 +205,6 @@
     </nav>
 
     <div class="hero">
-        <img src="logo.png" alt="LiteOptimizer Logo" class="hero-logo">
-        
         <h1>LiteOptimizer</h1>
         <p class="tagline">Minimalist core. Maximum performance.</p>
         
@@ -227,8 +216,8 @@
         <span class="free-label">100% Free & Open Source</span>
 
         <div class="social-links">
-            <a href="#" target="_blank">YouTube</a>
-            <a href="#" target="_blank">Discord</a>
+            <a href="https://youtube.com" target="_blank">YouTube</a>
+            <a href="https://discord.com" target="_blank">Discord</a>
         </div>
     </div>
 
