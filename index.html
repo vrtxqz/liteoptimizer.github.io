@@ -40,26 +40,34 @@
             padding: 0 20px;
         }
 
+        /* Tăng size logo ở Nav */
         .nav-logo {
-            height: 22px;
+            height: 28px; 
             width: auto;
-            opacity: 0.95;
+            opacity: 1;
         }
 
         .nav-brand {
             color: #f5f5f7;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px; /* Tăng nhẹ size chữ brand cho cân với logo */
             font-weight: 500;
-            margin-left: 10px;
+            margin-left: 12px;
             letter-spacing: -0.01em;
-            opacity: 0.8;
         }
 
         /* Hero Section */
         .hero {
-            padding-top: 180px;
+            padding-top: 160px;
             padding-bottom: 80px;
+        }
+
+        /* Logo chính ở giữa trang */
+        .hero-logo {
+            width: 100px; /* Logo lớn ở trung tâm */
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
         }
 
         h1 {
@@ -99,17 +107,17 @@
             text-decoration: none;
             display: inline-block;
             position: relative;
-            overflow: hidden; /* Để hiệu ứng không tràn ra ngoài */
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
         .btn-download:hover {
             background-color: #0077ed;
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 113, 227, 0.4);
+            box-shadow: 0 0 25px rgba(0, 113, 227, 0.4);
         }
 
-        /* Hiệu ứng "Soẹt" qua */
+        /* Hiệu ứng "Soẹt" */
         .btn-download::after {
             content: '';
             position: absolute;
@@ -120,7 +128,7 @@
             background: linear-gradient(
                 to right,
                 transparent,
-                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.4),
                 transparent
             );
             transform: rotate(30deg);
@@ -136,8 +144,9 @@
             display: block;
             margin-top: 12px;
             font-size: 13px;
-            color: #00ff73; /* Màu xanh lá nhẹ cho chữ Free */
-            opacity: 0.8;
+            color: #00ff73;
+            opacity: 0.9;
+            font-weight: 500;
         }
 
         /* Social Links */
@@ -145,13 +154,14 @@
             margin-top: 40px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .social-links a {
             color: #86868b;
             text-decoration: none;
             font-size: 14px;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
@@ -204,6 +214,8 @@
     </nav>
 
     <div class="hero">
+        <img src="logo.png" alt="LiteOptimizer Logo" class="hero-logo">
+        
         <h1>LiteOptimizer</h1>
         <p class="tagline">Minimalist core. Maximum performance.</p>
         
@@ -215,8 +227,8 @@
         <span class="free-label">100% Free & Open Source</span>
 
         <div class="social-links">
-            <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank">YouTube</a>
-            <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a>
+            <a href="#" target="_blank">YouTube</a>
+            <a href="#" target="_blank">Discord</a>
         </div>
     </div>
 
