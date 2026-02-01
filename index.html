@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Toàn bộ giao diện Dark Mode */
         body {
             margin: 0;
             padding: 0;
@@ -20,12 +19,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Thanh Menu mờ ảo kiểu Glassmorphism */
+        /* Navbar */
         nav {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            padding: 18px 0;
+            padding: 12px 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -33,26 +32,41 @@
             border-bottom: 0.5px solid #222;
         }
 
-        nav a {
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            height: 22px;
+            width: auto;
+            opacity: 0.95;
+        }
+
+        .nav-brand {
             color: #f5f5f7;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
-            letter-spacing: 0.5px;
+            margin-left: 10px;
+            letter-spacing: -0.01em;
+            opacity: 0.8;
         }
 
-        /* Phần nội dung chính (Hero) */
+        /* Hero Section */
         .hero {
             padding-top: 180px;
             padding-bottom: 80px;
         }
 
         h1 {
-            font-size: clamp(40px, 8vw, 64px); /* Tự co giãn theo màn hình */
+            font-size: clamp(40px, 8vw, 64px);
             font-weight: 600;
             letter-spacing: -0.02em;
             margin-bottom: 15px;
-            /* Hiệu ứng chữ đổ màu bạc */
             background: linear-gradient(#ffffff, #a1a1a6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -67,14 +81,14 @@
 
         .description {
             max-width: 600px;
-            margin: 0 auto 45px;
+            margin: 0 auto 40px;
             line-height: 1.6;
             color: #86868b;
             font-size: 18px;
             padding: 0 20px;
         }
 
-        /* Nút Download xanh chuẩn Apple */
+        /* Shiny Button Effect */
         .btn-download {
             background-color: #0071e3;
             color: white;
@@ -83,17 +97,69 @@
             font-size: 17px;
             font-weight: 500;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
+            position: relative;
+            overflow: hidden; /* Để hiệu ứng không tràn ra ngoài */
+            transition: all 0.3s ease;
         }
 
         .btn-download:hover {
             background-color: #0077ed;
-            transform: scale(1.05); /* Phóng to nhẹ khi di chuột */
+            transform: scale(1.05);
             box-shadow: 0 0 20px rgba(0, 113, 227, 0.4);
         }
 
-        /* Các tính năng nổi bật */
+        /* Hiệu ứng "Soẹt" qua */
+        .btn-download::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -100%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transform: rotate(30deg);
+            transition: none;
+        }
+
+        .btn-download:hover::after {
+            left: 150%;
+            transition: all 0.6s ease;
+        }
+
+        .free-label {
+            display: block;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #00ff73; /* Màu xanh lá nhẹ cho chữ Free */
+            opacity: 0.8;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #86868b;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Features */
         .features {
             display: flex;
             justify-content: center;
@@ -119,7 +185,6 @@
             line-height: 1.5;
         }
 
-        /* Chân trang */
         footer {
             margin-top: 100px;
             padding: 40px 0;
@@ -132,7 +197,10 @@
 <body>
 
     <nav>
-        <a href="#">LiteOptimizer</a>
+        <div class="nav-container">
+            <img src="logo.png" alt="LiteOptimizer Logo" class="nav-logo">
+            <a href="#" class="nav-brand">LiteOptimizer</a>
+        </div>
     </nav>
 
     <div class="hero">
@@ -144,6 +212,12 @@
         </div>
 
         <a href="#" class="btn-download">Download Installer</a>
+        <span class="free-label">100% Free & Open Source</span>
+
+        <div class="social-links">
+            <a href="https://youtube.com/@YOUR_CHANNEL" target="_blank">YouTube</a>
+            <a href="https://discord.gg/YOUR_INVITE" target="_blank">Discord</a>
+        </div>
     </div>
 
     <div class="features">
