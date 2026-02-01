@@ -1,11 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lite Optimizer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteOptimizer — Minimal. Smooth. Fast.</title>
+    <style>
+        /* Apple-esque Dark Aesthetic */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #f5f5f7;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Minimalist Navigation */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 18px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 0.5px solid #222;
+        }
+
+        nav a {
+            color: #f5f5f7;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover { opacity: 1; }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            margin-bottom: 12px;
+            background: -webkit-linear-gradient(#fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.tagline {
+            font-size: 26px;
+            font-weight: 500;
+            color: #f5f5f7;
+            margin-bottom: 24px;
+        }
+
+        .description {
+            max-width: 650px;
+            margin: 0 auto 45px;
+            line-height: 1.6;
+            color: #86868b;
+            font-size: 19px;
+        }
+
+        /* Call to Action Button */
+        .btn-download {
+            background-color: #0071e3;
+            color: white;
+            padding: 14px 34px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background-color: #0077ed;
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            margin-top: 100px;
+            padding: 0 20px;
+        }
+
+        .feature-item {
+            max-width: 280px;
+        }
+
+        .feature-item h3 { 
+            font-size: 22px; 
+            font-weight: 600;
+            margin-bottom: 12px; 
+        }
+
+        .feature-item p { 
+            color: #86868b; 
+            font-size: 15px; 
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 120px;
+            padding: 50px 0;
+            border-top: 0.5px solid #222;
+            font-size: 13px;
+            color: #424245;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <h1>Chào mừng tới Lite Optimizer</h1>
-    <p>Trang web đang hoạt động!</p>
-</body>
-</html>
- 
+
+    <nav>
+        <a href="#">LiteOptimizer</a>
+    </nav>
+
+    <div class="hero">
+        <h1>LiteOptimizer</h1>
+        <p class="tagline">Minimalist core. Maximum performance.</p>
+        
+        <div class="description">
+            LiteOptimizer refines your Windows experience by removing unnecessary background processes and optimizing system resources. Make your low-end PC feel brand new again.
+        </div>
+
+        <a href="#" class="btn-download">Download Installer</a>
+    </div>
+
+    <div class="features">
+        <div class="feature-item">
+            <h3>Ultra Lightweight</h3>
+            <p>Designed to run with near-zero impact on your system memory.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Minimalist Design</h3>
+            <p>
